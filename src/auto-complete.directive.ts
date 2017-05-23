@@ -72,6 +72,7 @@ export class NguiAutoCompleteDirective implements OnInit {
     this.wrapperEl = document.createElement("div");
     this.wrapperEl.className = "ngui-auto-complete-wrapper";
     this.wrapperEl.style.position = "relative";
+    this.wrapperEl.style.display = "inline";
     this.el.parentElement.insertBefore(this.wrapperEl, this.el.nextSibling);
     this.wrapperEl.appendChild(this.el);
 
@@ -202,7 +203,7 @@ export class NguiAutoCompleteDirective implements OnInit {
       this.acDropdownEl.style.position = "absolute";
       this.acDropdownEl.style.zIndex = "1";
       this.acDropdownEl.style.left = "0";
-      this.acDropdownEl.style.display = "inline";
+      this.acDropdownEl.style.display = "inlinengui";
 
       if (closeToBottom) {
         this.acDropdownEl.style.bottom = `${thisInputElBCR.height}px`;
