@@ -605,6 +605,7 @@ var NguiAutoCompleteDirective = (function () {
         this.wrapperEl = document.createElement("div");
         this.wrapperEl.className = "ngui-auto-complete-wrapper";
         this.wrapperEl.style.position = "relative";
+        this.wrapperEl.style.display = "inline";
         this.el.parentElement.insertBefore(this.wrapperEl, this.el.nextSibling);
         this.wrapperEl.appendChild(this.el);
         //Check if we were supplied with a [formControlName] and it is inside a [form]
