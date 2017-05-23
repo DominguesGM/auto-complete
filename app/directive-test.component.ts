@@ -7,6 +7,12 @@ import { AppSvc } from "./app.service";
 
 let templateStr: string = `
   <h1> Autocomplete Directive Test - Local Source </h1>
+
+  <div>
+  SomeTextfbyukaf
+    <input auto-complete [source]="arrayOfStrings"
+                    no-match-found-text="Add new" style="display: inline;"/>
+  </div>
     
   <fieldset><legend><h2>Source as Array of Strings</h2></legend>
     <ngui-utils-1>
