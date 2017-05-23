@@ -40,6 +40,7 @@ export class NguiAutoCompleteDirective implements OnInit {
   @Input("value-formatter") valueFormatter: any;
   @Input("tab-to-select") tabToSelect: boolean = true;
   @Input("match-formatted") matchFormatted: boolean = false;
+  @Input("hide-no-result") hideNoResult: boolean = false;
 
   @Input() ngModel: String;
   @Input('formControlName') formControlName: string;
@@ -143,6 +144,7 @@ export class NguiAutoCompleteDirective implements OnInit {
     component.noMatchFoundText = this.noMatchFoundText;
     component.tabToSelect = this.tabToSelect;
     component.matchFormatted = this.matchFormatted;
+    component.hideNoResult = this.hideNoResult;
 
     component.valueSelected.subscribe(this.selectNewValue);
 

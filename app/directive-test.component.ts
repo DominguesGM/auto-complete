@@ -14,6 +14,7 @@ let templateStr: string = `
         [source]="arrayOfStrings"
         [accept-user-input]="false"
         (ngModelChange)="myCallback($event)"
+        hide-no-result="true"
         placeholder="enter text">
         <input id="model1" [ngModel]="model1" autofocus />
       </div>
@@ -31,6 +32,7 @@ let templateStr: string = `
         blank-option-text="Select One"
         [(ngModel)]="model2"
         [source]="arrayOfKeyValues" 
+        hide-no-result="true"
         placeholder="enter text"/> 
       <a href="javascript:void(0)" (click)="model2={id:'change', value: 'it'}">Change It</a>
       <br/>selected model2: {{model2 | json}}<br/><br/>
@@ -46,6 +48,7 @@ let templateStr: string = `
         [(ngModel)]="model3"
         placeholder="enter text"
         value-formatter="(key) name"
+        hide-no-result="true"
         list-formatter="(key) name"
         [match-formatted]="true" />
       <br/>selected model3: {{model3 | json}}<br/><br/>
@@ -63,6 +66,7 @@ let templateStr: string = `
         placeholder="Enter Address(min. 2 chars)"
         [source]="googleGeoCode" 
         no-match-found-text="No Match Found"
+        hide-no-result="true"
         list-formatter="formatted_address"
         path-to-data="results"
         loading-text="Google Is Thinking..."
@@ -81,6 +85,7 @@ let templateStr: string = `
         placeholder="Start typing a hero name (min. 2 chars) ... for example: Hulk"     
         [(ngModel)]="model5" 
         [source]="appSvc.findHeroes"
+        hide-no-result="true"
         path-to-data="data.results"
         [list-formatter]="renderHero"
         min-chars="2" 
@@ -99,6 +104,7 @@ let templateStr: string = `
         [(ngModel)]="myModel"
         [source]="arrayOfNumbers"
         [list-formatter]="rightAligned"
+        hide-no-result="true"
         placeholder="amount" align="end">
         <span md-prefix>$&nbsp;</span>
         <span md-suffix>.00</span>

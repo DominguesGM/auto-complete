@@ -31,12 +31,12 @@ import { NguiAutoComplete } from "./auto-complete";
            [(ngModel)]="keyword" />
 
     <!-- dropdown that user can select -->
-    <ul *ngIf="dropdownVisible" [class.empty]="emptyList">
+    <ul *ngIf="dropdownVisible && !(hideNoResult && !filteredList.length)" [class.empty]="emptyList">
       <li *ngIf="isLoading" class="loading">{{loadingText}}</li>
-      <li *ngIf="minCharsEntered && !isLoading && !filteredList.length"
+      <li *ngIf="minCharsEntered && !isLoading && !filteredList.length && !hideNoResult"
            (mousedown)="selectOne('')"
            class="no-match-found">{{noMatchFoundText || 'No Result Found'}}</li>
-      <li *ngIf="blankOptionText && filteredList.length"
+      <li *ngIf="blankOptionText && filteredList.length && !hideNoResult"
           (mousedown)="selectOne('')"
           class="blank-item">{{blankOptionText}}</li>
       <li class="item"
@@ -122,6 +122,7 @@ export class NguiAutoCompleteComponent implements OnInit {
   @Input("show-dropdown-on-init") showDropdownOnInit: boolean = false;
   @Input("tab-to-select") tabToSelect: boolean = true;
   @Input("match-formatted") matchFormatted: boolean = false;
+  @Input("hide-no-result") hideNoResult: boolean = true;
 
   @Output() valueSelected = new EventEmitter();
   @ViewChild('autoCompleteInput') autoCompleteInput: ElementRef;

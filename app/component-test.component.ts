@@ -24,6 +24,7 @@ var templateStr = `
           no-match-found-text="No Match Found"
           path-to-data="results"
           placeholder="Enter Address"
+          hide-no-result="true"
         ></ngui-auto-complete>
       </div>
     </ngui-utils-1>
@@ -40,6 +41,7 @@ var templateStr = `
          [show-dropdown-on-init]="true"
          (valueSelected)="myModel = $event"
          [show-input-tag]="false"
+         hide-no-result="true"
          [source]="[1,2,3,4,5]">
       </ngui-auto-complete>
      </ngui-utils-2>

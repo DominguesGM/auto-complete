@@ -15,6 +15,7 @@ var NguiAutoCompleteDirective = (function () {
         this.loadingText = "Loading";
         this.tabToSelect = true;
         this.matchFormatted = false;
+        this.hideNoResult = false;
         this.ngModelChange = new core_1.EventEmitter();
         this.valueChanged = new core_1.EventEmitter();
         //show auto-complete list below the current element
@@ -233,6 +234,7 @@ var NguiAutoCompleteDirective = (function () {
         'valueFormatter': [{ type: core_1.Input, args: ["value-formatter",] },],
         'tabToSelect': [{ type: core_1.Input, args: ["tab-to-select",] },],
         'matchFormatted': [{ type: core_1.Input, args: ["match-formatted",] },],
+        'hideNoResult': [{ type: core_1.Input, args: ["hide-no-result",] },],
         'ngModel': [{ type: core_1.Input },],
         'formControlName': [{ type: core_1.Input, args: ['formControlName',] },],
         'extFormControl': [{ type: core_1.Input, args: ['formControl',] },],
