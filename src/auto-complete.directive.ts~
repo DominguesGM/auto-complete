@@ -40,7 +40,7 @@ export class NguiAutoCompleteDirective implements OnInit {
   @Input("value-formatter") valueFormatter: any;
   @Input("tab-to-select") tabToSelect: boolean = true;
   @Input("match-formatted") matchFormatted: boolean = false;
-  @Input("hide-no-result") hideNoResult: boolean = true;
+  @Input("hide-no-result") hideNoResult: boolean = false;
 
   @Input() ngModel: String;
   @Input('formControlName') formControlName: string;
