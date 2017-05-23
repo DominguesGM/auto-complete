@@ -15,7 +15,7 @@ var NguiAutoCompleteDirective = (function () {
         this.loadingText = "Loading";
         this.tabToSelect = true;
         this.matchFormatted = false;
-        this.hideNoResult = false;
+        this.hideNoResult = true;
         this.ngModelChange = new core_1.EventEmitter();
         this.valueChanged = new core_1.EventEmitter();
         //show auto-complete list below the current element
@@ -36,6 +36,7 @@ var NguiAutoCompleteDirective = (function () {
             component.noMatchFoundText = _this.noMatchFoundText;
             component.tabToSelect = _this.tabToSelect;
             component.matchFormatted = _this.matchFormatted;
+            component.hideNoResult = _this.hideNoResult;
             component.valueSelected.subscribe(_this.selectNewValue);
             _this.acDropdownEl = _this.componentRef.location.nativeElement;
             _this.acDropdownEl.style.display = "none";
@@ -79,7 +80,7 @@ var NguiAutoCompleteDirective = (function () {
                 _this.acDropdownEl.style.position = "absolute";
                 _this.acDropdownEl.style.zIndex = "1";
                 _this.acDropdownEl.style.left = "0";
-                _this.acDropdownEl.style.display = "inline-block";
+                _this.acDropdownEl.style.display = "inline";
                 if (closeToBottom) {
                     _this.acDropdownEl.style.bottom = thisInputElBCR.height + "px";
                 }

@@ -202,7 +202,7 @@ export class NguiAutoCompleteDirective implements OnInit {
       this.acDropdownEl.style.position = "absolute";
       this.acDropdownEl.style.zIndex = "1";
       this.acDropdownEl.style.left = "0";
-      this.acDropdownEl.style.display = "inline-block";
+      this.acDropdownEl.style.display = "inline";
 
       if (closeToBottom) {
         this.acDropdownEl.style.bottom = `${thisInputElBCR.height}px`;
