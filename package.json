@@ -1,6 +1,6 @@
 {
   "name": "dominguesgm-autocomplete",
-  "version": "0.13.6",
+  "version": "0.13.7",
   "description": "Angular2 Input Autocomplete adaptation from ngui-auto-complete",
   "license": "MIT",
   "main": "dist/auto-complete.umd.js",
