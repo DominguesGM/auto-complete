@@ -31,7 +31,7 @@ import { NguiAutoComplete } from "./auto-complete";
            [(ngModel)]="keyword" />
 
     <!-- dropdown that user can select -->
-    <ul *ngIf="dropdownVisible && !(hideNoResult && !filteredList.length)" [class.empty]="emptyList">
+    <ul *ngIf="dropdownVisible && !(hideNoResult && !filteredList.length) && minCharsEntered" [class.empty]="emptyList">
       <li *ngIf="isLoading" class="loading">{{loadingText}}</li>
       <li *ngIf="minCharsEntered && !isLoading && !filteredList.length && !hideNoResult"
            (mousedown)="selectOne('')"
